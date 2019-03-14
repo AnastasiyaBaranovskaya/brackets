@@ -21,6 +21,12 @@ module.exports = function check(str, bracketsConfig) {
     str = str.slice(0, i-1) + str.slice(i+1, len);
   }
 }
+for (let i = 0; i <= len; i++) { 
+  if ( (str[i] == '|') && (str[i-1] == '|')) {
+    brackets += 1; 
+    str = str.slice(0, i-1) + str.slice(i+1, len);
+  }
+}
 }
   if (brackets == len/2 ){
     return true;
